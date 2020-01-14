@@ -1,0 +1,2 @@
+com.sollian.annotations
+string app_name

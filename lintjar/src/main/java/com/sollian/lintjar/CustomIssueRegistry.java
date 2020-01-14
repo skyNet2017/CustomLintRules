@@ -20,6 +20,8 @@ public class CustomIssueRegistry extends IssueRegistry {
     public List<Issue> getIssues() {
         return Arrays.asList(
                 LogDetector.ISSUE
+                ,ToastDetector.ISSUE
+                ,JavaBeanIdDetector.ISSUE
                 , NewThreadDetector.ISSUE
                 , ConcurrentModifyDetector.ISSUE
                 , ModuleAccessibleDetector.ISSUE

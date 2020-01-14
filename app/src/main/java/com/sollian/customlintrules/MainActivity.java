@@ -5,6 +5,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.PopupWindow;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -72,6 +73,9 @@ public class MainActivity extends Activity {
 
         LinearLayoutManager manager = new LinearLayoutManager(this);
 //        manager.setRecycleChildrenOnDetach(true);
+
+
+        Toast.makeText(this,"ddd",Toast.LENGTH_SHORT).show();
     }
 
     public void init() {

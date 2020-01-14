@@ -1,0 +1,2 @@
+com.sollian.base
+string app_name

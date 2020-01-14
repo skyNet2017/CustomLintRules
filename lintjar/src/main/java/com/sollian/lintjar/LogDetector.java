@@ -19,7 +19,7 @@ public class LogDetector extends Detector implements Detector.UastScanner {
 
     public static final Issue ISSUE = Issue.create(
             "LogUsage",
-            "避免调用android.util.Log",
+            "避免调用Log.xxx,应使用XLogUtil.xxx",
             "请勿直接调用android.util.Log，应该使用统一工具类",
             Category.LINT, 5, Severity.ERROR,
             new Implementation(LogDetector.class, Scope.JAVA_FILE_SCOPE));
@@ -34,7 +34,7 @@ public class LogDetector extends Detector implements Detector.UastScanner {
                                 @NotNull UCallExpression node,
                                 @NotNull PsiMethod method) {
         if (context.getEvaluator().isMemberInClass(method, "android.util.Log")) {
-            context.report(ISSUE, node, context.getLocation(node), "避免调用android.util.Log");
+            context.report(ISSUE, node, context.getLocation(node), "避免调用Log.xxx,应使用XLogUtil.xxx");
         }
     }
 }
